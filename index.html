@@ -1,0 +1,317 @@
+<!DOCTYPE html>--------------html-------------------
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>West Family Express</title>
+
+    <style>
+            body {
+                font-family: Arial, san-serif, cursive;
+                text-align: center;
+                margin: 50px;
+            
+            }
+    h1 {
+        color: #B0E0E6;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    
+    }
+
+    </style>
+    </head>
+</body>
+
+    <h1>Welcome to West Family Express!</h1>
+    <p>I made this buisness with my passion of cutting yards to make them beautiful. Hopefully this buisness blooms with support and amazingly cut yards.</p>
+
+    <button onclick=""sayHello()">Click Me</button>
+
+    <script>
+        function sayHello() {
+            alert("Hello, welcome!");
+        }
+    </script>
+
+    <section id="gallery">
+        <h2>Our Lawn Care Services</h2>
+
+        <img src="lawn1.jpg" alt="Freshly mowed lawn" width="350">
+        
+    </section>
+
+    <section id="gallery">
+        <img src="lawn2.jpg" alt="Freshly cut" width="350">
+    </section>
+
+</body>
+</html>
+----------------------------------------- CSS----------------------------------------------
+body {
+    font-family: Arial, san-serif;
+    background-color: black;
+    color:  greenyellow;
+    margin: 0
+}
+
+header {
+    background-color:black;
+    color: greenyellow;
+    text-align: center;
+    padding: 25px;
+}
+
+nav {
+    background-color: black;
+    padding:12px;
+    text-align: center;
+}
+
+nav a:hover {
+    color: Blue;
+}
+
+----------------------Main Section----------------------
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.card {
+    background: black;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: greenyellow;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+table{ 
+    width: 100%;
+    border-collapse: collapse;
+}
+table th, table td{
+    border:1px solid greenyellow;
+    padding: 12px;
+    text-align: center;
+}
+
+table th{
+    background:black;
+    color: greenyellow;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea{
+    padding:12px;
+    margin-bottom: 15px;
+    border:1px solid green;
+    border-radius:5px;
+
+}
+
+button {
+    background-color: black;
+    color: greenyellow;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.pay-btn {
+    display:inline-block;
+    text-decoration:none;
+    background:black;
+    color: greenyellow;
+    padding:12px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: black;
+    color: greenyellow;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>West Family Express</h1>
+        <p>Your trusted landscaping service</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <div class="card">
+            <h2>About Us</h2>
+            <p>I made this business with my passion of cutting yards to make them beautiful. Hopefully this business blooms with support and amazingly cut yards.</p>
+            </p>
+        </div>
+    </section>
+    <section id="services">
+        <div class="card">
+            <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="service-box">
+                <h3>Lawn Mowing</h3>
+                <h3>Weed Eating</h3>
+                <h3>Hardscape</h3>
+                <h3>Pressure Washing</h3>
+                <h3>Blowing up leaves</h3>
+                <h3>Irragation system and repair</h3>
+                <h3>Tree services</h3>
+                <h3>Plants installation</h3>
+                </div>
+
+        </section>
+
+        <section id="pricing">
+            <div class="card">
+                <h2>Pricing</h2>
+
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                        </tr>
+
+                        <tr>
+                            
+                            
+                        </tr>
+
+                        <tr>
+                            
+                            
+                        </tr>
+
+                        <tr>
+                            
+                            
+                        </tr>
+
+        
+                </table>
+            </div>
+
+    
+            
+
+        </div>
+    </section>
+
+    <section id="Booking">
+        <div class="card">
+            <h2>Book AN Appointment</h2>
+            
+            <form onsubmit="bookAppointment(event)">
+                <imput type="text" placeholder="Full Name" required>
+                    
+                    <imput type="email" placeholder="Email Address" required>
+
+                    <imput type="tel" placeholder="Phone Number" required>
+
+                    <imput type="text" placeholder="Property Address" required>
+
+                    <imput type="date" required>
+
+                    <select required>
+                        <option values="">Select Yard Size</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+
+                    <textarea rows="4"
+                    placeholder="Additional Notes"></textarea>
+                    <imput type="text" placeholder="Additional Notes" required>
+
+                    <button type="submit">
+                        Request Appointment
+                    </button>
+                </form>
+
+                <p id="message"></p>
+
+                <br>
+
+                <a class="pay-btn"
+                href="https://YOUR+PAYMENT-LINK-HERE">
+                           Pay Now
+                        </a>
+                        </div>
+                    </section>
+
+                    <section id="contact">
+                      <div class="card">
+            <h2>Contact Us</h2>
+            
+            <p>Phione: ;</p>
+            <p>Email: ;</p>
+            </div>
+        </section>
+
+        <footer>
+            <p> &copy; 2026 West Family Express. All Rights Reserved.</p>
+        </footer>
+
+    </script>
+    function bookAppointment(event){
+        event.preventDefault();
+
+        document.getElementById("message").innerHTML =
+        "Thank you! Your appointment request has been submitted.";
+
+        alert("Appointment Request Sent!");
+    }
+</script>
+
+</body>
+</html>
+                   <button><class="pay-btn">Book A ppointment</button>
+                </imput>
+            </form>
+        </div>
+    </section>
+</body>
